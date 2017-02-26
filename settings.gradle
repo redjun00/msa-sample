@@ -1,0 +1,23 @@
+rootProject.name = 'spring-cloud-sample'
+
+include 'config-server'
+findProject(':config-server')?.name = 'config-server'
+
+include 'discovery-server'
+findProject(':discovery-server')?.name = 'discovery-server'
+
+include 'edge-server'
+findProject(':edge-server')?.name = 'edge-server'
+
+include 'composite-api'
+findProject(':composite-api')?.name = 'composite-api'
+
+include 'service:asset-service'
+findProject(':service:asset-service')?.name = 'asset-service'
+
+include 'service:campaign-service'
+findProject(':service:campaign-service')?.name = 'campaign-service'
+
+include 'service:device-service'
+findProject(':service:device-service')?.name = 'device-service'
+

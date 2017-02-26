@@ -1,0 +1,25 @@
+spring:
+  application:
+    name: edgeserver
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka/,http://localhost:8762/eureka/
+  instance:
+    preferIpAddress: true
+    leaseRenewalIntervalInSeconds: 10
+    leaseExpirationDurationInSeconds: 30
+    metadataMap:
+      instanceId: ${spring.application.name}:${spring.application.instance_id:${random.value}}
+
+
+#zuul.routes.composite 경로는 composite-api 프로젝트의 spring.application.name과 동일하다 그 이름이 바뀌면 바뀌어야 한다
+zuul:
+  ignoredServices: '*'
+  routes:
+    composite:
+      path: /composite/**
+server:
+  port: 8765
+#      http://172.30.1.20:8765/composite/asset/1

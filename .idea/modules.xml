@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/service/asset-service/asset-service.iml" filepath="$PROJECT_DIR$/.idea/modules/service/asset-service/asset-service.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/service/campaign-service/campaign-service.iml" filepath="$PROJECT_DIR$/.idea/modules/service/campaign-service/campaign-service.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/composite-api/composite-api.iml" filepath="$PROJECT_DIR$/.idea/modules/composite-api/composite-api.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/config-server/config-server.iml" filepath="$PROJECT_DIR$/.idea/modules/config-server/config-server.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/service/device-service/device-service.iml" filepath="$PROJECT_DIR$/.idea/modules/service/device-service/device-service.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/discovery-server/discovery-server.iml" filepath="$PROJECT_DIR$/.idea/modules/discovery-server/discovery-server.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/edge-server/edge-server.iml" filepath="$PROJECT_DIR$/.idea/modules/edge-server/edge-server.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/service/service.iml" filepath="$PROJECT_DIR$/.idea/modules/service/service.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/spring-cloud-sample.iml" filepath="$PROJECT_DIR$/.idea/modules/spring-cloud-sample.iml" />
+    </modules>
+  </component>
+</project>

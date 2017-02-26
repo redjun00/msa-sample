@@ -1,0 +1,27 @@
+subprojects {
+    buildscript {
+        repositories {
+            maven {
+                url 'http://maven.dreamer.co.kr/content/groups/public'
+                credentials {
+                    username MAVEN_USER_ID
+                    password MAVEN_USER_PASSWORD
+                }
+            }
+        }
+//        dependencies {
+//            // Gradle 3.0 compatibility workround - https://github.com/spring-gradle-plugins/dependency-management-plugin/issues/87
+//            classpath "io.spring.gradle:dependency-management-plugin:0.6.0.RELEASE"
+//        }
+    }
+
+    repositories {
+        maven {
+            url 'http://maven.dreamer.co.kr/content/groups/public'
+            credentials {
+                username MAVEN_USER_ID
+                password MAVEN_USER_PASSWORD
+            }
+        }
+    }
+}

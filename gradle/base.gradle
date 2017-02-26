@@ -1,0 +1,52 @@
+apply plugin: 'groovy'
+apply plugin: 'java'
+apply plugin: 'org.springframework.boot'
+apply plugin: 'propdeps'
+apply plugin: 'propdeps-idea'
+apply plugin: 'idea'
+apply plugin: 'maven'
+apply plugin: 'io.spring.dependency-management'
+
+sourceCompatibility = 1.8
+targetCompatibility = 1.8
+
+compileGroovy {
+    sourceCompatibility = 1.8
+    targetCompatibility = 1.8
+}
+
+[compileJava, compileTestJava]*.options*.encoding = 'UTF-8'
+[compileGroovy, compileTestGroovy]*.options*.encoding = 'UTF-8'
+[compileGroovy, compileTestGroovy]*.groovyOptions*.encoding = 'UTF-8'
+
+configurations.all {
+    resolutionStrategy {
+        force 'ch.qos.logback:logback-classic:1.1.6', 'ch.qos.logback:logback-core:1.1.6'
+        forcedModules = ['ch.qos.logback:logback-classic:1.1.6', 'ch.qos.logback:logback-core:1.1.6']
+    }
+}
+
+dependencyManagement {
+    imports {
+        mavenBom "org.springframework.cloud:spring-cloud-dependencies:Brixton.RELEASE"
+    }
+}
+
+dependencies {
+    compile 'org.springframework.boot:spring-boot-starter'
+    compile 'org.springframework.boot:spring-boot-starter-actuator'
+
+    compile 'joda-time:joda-time:2.9.7'
+    compile 'com.google.guava:guava:21.0'
+    compile 'net.logstash.logback:logstash-logback-encoder:4.8'
+    compile 'org.codehaus.janino:janino:3.0.6'
+
+    compile 'ch.qos.logback:logback-classic:1.1.8'
+    compile 'ch.qos.logback:logback-core:1.1.8'
+
+    provided 'org.projectlombok:lombok:1.16.12'
+
+    testCompile ('org.springframework.boot:spring-boot-starter-test') {
+        exclude module: 'spring-boot-starter-tomcat'
+    }
+}

@@ -1,0 +1,10 @@
+spring:
+  application:
+    name: configserver
+  profiles:
+    active: 'cloud'
+  cloud:
+    config:
+      server:
+        git:
+          uri: /home/bw/Development/test-cloud-config/
