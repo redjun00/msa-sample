@@ -2,6 +2,7 @@ package tv.anypoint.composite.client;
 
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.cloud.netflix.ribbon.RibbonClient;
 import org.springframework.stereotype.Component;
 import org.springframework.web.client.RestTemplate;
 
@@ -16,6 +17,7 @@ public class AssetClient {
     private RestTemplate restTemplate;
 
     public String getAsset(long id) {
+        log.info("Composite web AssetClient: {}", id);
 
         String url = new StringBuilder()
                 .append(SERVICE_URL)

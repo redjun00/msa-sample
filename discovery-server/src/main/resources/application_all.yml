@@ -1,0 +1,51 @@
+server:
+  port: ${PORT:8761}
+spring:
+  application:
+    name: 'discovery'
+  profiles:
+    active: ${PROFILE:peer1}
+eureka:
+  dashboard:
+    path: /dashboard
+---
+spring:
+  profiles: peer1
+
+eureka:
+  instance:
+    hostname: peer1
+    leaseRenewalIntervalInSeconds: 3
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8762/eureka/
+  server:
+    waitTimeInMsWhenSyncEmpty: 0
+---
+spring:
+  profiles: peer2
+
+eureka:
+  instance:
+    hostname: peer2
+    leaseRenewalIntervalInSeconds: 3
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka/
+#  server:
+#      serviceUrl:
+#          defaultZone: http://localhost:8761/eureka/
+#          peer1: http://peer1/eureka/
+      waitTimeInMsWhenSyncEmpty: 0
+---
+spring:
+  profiles: standalone
+eureka:
+  client:
+    registerWithEureka: false
+    fetchRegistry: false
+    server:
+      waitTimeInMsWhenSyncEmpty: 0
+#    serviceUrl:
+#      defaultZone: http://${eureka.instance.hostname}:${server.port}/eureka/
+---
