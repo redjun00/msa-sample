@@ -1,8 +1,8 @@
-server.port: 8002
+server.port: 8014
 
 spring:
   application:
-    name: campaign-service
+    name: a-service
 
 eureka:
   client:

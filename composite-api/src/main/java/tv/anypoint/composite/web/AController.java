@@ -6,19 +6,19 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
-import tv.anypoint.composite.client.DeviceClient;
+import tv.anypoint.composite.client.AClient;
 
 @Slf4j
 @RestController
-@RequestMapping("/device")
-public class DeviceController {
+@RequestMapping("/a-service")
+public class AController {
 
     @Autowired
-    private DeviceClient deviceClient;
+    private AClient aClient;
 
     @RequestMapping(value = "/{id}", method = RequestMethod.GET)
-    public String getDevice(@PathVariable("id") long id) {
-        log.info("Composite web getDevice() id: {}", id);
-        return deviceClient.getDevice(id);
+    public String getA(@PathVariable("id") long id){
+        log.info("AController getA() id={}", id);
+        return aClient.getA(id);
     }
 }

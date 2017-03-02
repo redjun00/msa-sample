@@ -8,6 +8,7 @@
 #    active: peer1
 #
 #eureka:
+#  datacenter: local-1
 #  instance:
 #    hostname: peer1
 #    preferIpAddress: true
@@ -30,6 +31,7 @@ spring:
     active: peer2
 
 eureka:
+  datacenter: local-2
   instance:
     hostname: peer2
     preferIpAddress: true

@@ -12,6 +12,9 @@ findProject(':edge-server')?.name = 'edge-server'
 include 'composite-api'
 findProject(':composite-api')?.name = 'composite-api'
 
+include 'service:a-service'
+findProject(':service:a-service')?.name = 'a-service'
+
 include 'service:asset-service'
 findProject(':service:asset-service')?.name = 'asset-service'
 

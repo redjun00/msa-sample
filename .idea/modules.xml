@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/service/a-service/a-service.iml" filepath="$PROJECT_DIR$/.idea/modules/service/a-service/a-service.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/service/asset-service/asset-service.iml" filepath="$PROJECT_DIR$/.idea/modules/service/asset-service/asset-service.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/service/campaign-service/campaign-service.iml" filepath="$PROJECT_DIR$/.idea/modules/service/campaign-service/campaign-service.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/composite-api/composite-api.iml" filepath="$PROJECT_DIR$/.idea/modules/composite-api/composite-api.iml" />

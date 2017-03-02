@@ -16,6 +16,7 @@
             <option value="$PROJECT_DIR$/discovery-server" />
             <option value="$PROJECT_DIR$/edge-server" />
             <option value="$PROJECT_DIR$/service" />
+            <option value="$PROJECT_DIR$/service/a-service" />
             <option value="$PROJECT_DIR$/service/asset-service" />
             <option value="$PROJECT_DIR$/service/campaign-service" />
             <option value="$PROJECT_DIR$/service/device-service" />
